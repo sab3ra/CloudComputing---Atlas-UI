@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Grocery Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Atlas Grocery Management</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#inventory">Inventory</a></li>
+            <li><a href="#promotions">Promotions</a></li>
+            <li><a href="#membership">Membership</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+       
+        <section id="inventory">
+            <h2>Inventory Management</h2>
+            <button onclick="fetchInventory()">Check Inventory</button>
+            <button onclick="showInventoryForm()">Add New Product</button>
+            <div id="inventory-filters">
+                <input type="text" id="product-search" placeholder="Search by Product Name">
+                <select id="category-filter">
+                    <option value="">All Categories</option>
+                    <option value="fruits">Fruits</option>
+                    <option value="bakery">Bakery</option>
+                    <option value="meat">Meat</option>
+                    <option value="condiments">Condiments</option>
+                    <option value="dairy">Dairy</option>
+                    
+                </select>
+            </div>
+            <div id="inventory-list"></div>
+        </section>
+
+     
+        <section id="promotions">
+            <h2>Promotion Management</h2>
+            <button onclick="fetchPromotions()">Check Promotions</button>
+            <button onclick="showPromotionForm()">Add New Promotion</button>
+            <div id="promotions-filters">
+                <input type="text" id="promo-search" placeholder="Search by Description or SKU">
+                <input type="date" id="promo-start-date" placeholder="Start Date">
+                <input type="date" id="promo-end-date" placeholder="End Date">
+            </div>
+            <div id="promotions-list"></div>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
